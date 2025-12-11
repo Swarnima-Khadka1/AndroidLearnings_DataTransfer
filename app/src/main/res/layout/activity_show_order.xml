@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/hotpink">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Swarnima's cafe ☕"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/darkPurple"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-medium"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/nudepink">
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/darkPurple"
+            android:textSize="20dp" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
