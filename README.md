@@ -6,7 +6,7 @@ This makes it a practical example for beginners learning how to manage data flow
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **User Input Collection** – Accepts data from four EditText fields  
 - **Intent-based Navigation** – Uses `Intent.putExtra()` to send data to another Activity  
@@ -19,7 +19,7 @@ This makes it a practical example for beginners learning how to manage data flow
 | ![Input](app/cafe1.png) | ![Output](app/cafe2.png) 
 
 
-## 🛠️ How to Build from Source
+## How to Build from Source
 
 Follow the steps below to run the project on your device or emulator:
 
