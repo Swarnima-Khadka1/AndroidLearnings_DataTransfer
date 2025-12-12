@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DataTransfer">
         <activity
+            android:name=".signIn"
+            android:exported="false" />
+        <activity
+            android:name=".OrderNow"
+            android:exported="false" />
+        <activity
+            android:name=".First"
+            android:exported="false" />
+        <activity
+            android:name=".splashScreen"
+            android:exported="false" />
+        <activity
             android:name=".showOrder"
             android:exported="false" />
         <activity
