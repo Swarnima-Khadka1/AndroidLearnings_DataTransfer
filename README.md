@@ -13,9 +13,11 @@ This is simple beginner Practice of a core Android concept: **passing data betwe
 - **Intent-based Navigation** – Uses `Intent.putExtra()` to send data to another Activity  
 - **Clean Second Screen UI** – Displays the transferred text neatly  
 
+---
 ## Splash Screen
-```markdown
+
 ![Splash Demo](app/splashScreen.gif)
+---
 
 ## 📸 Screenshots
 
