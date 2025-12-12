@@ -18,7 +18,7 @@ class showOrder : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val ordersOfCustomer = intent.getStringExtra(MainActivity.KEY)
+        val ordersOfCustomer = intent.getStringExtra(OrderNow.KEY)
         val order= findViewById<TextView>(R.id.order)
 
     order.text= "Order Received:" +" "+ ordersOfCustomer.toString()
