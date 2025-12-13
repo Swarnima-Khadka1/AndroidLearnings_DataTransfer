@@ -18,9 +18,9 @@ This is simple beginner Practice of a core Android concept: **passing data betwe
 
 ## 📸 Screenshots
 
-|Splash Screen |SignUp Activity |SignIn Activity | Input Screen | Output Screen |
-| :---:| :---: | :---: | :---: | :---: | 
-|![Splash Demo](app/splashScreen.gif) | ![SignUp](app/signUp.png)| ![SignIn](app/signIn.png)| ![Input](app/cafe1.png) | ![Output](app/cafe2.png) 
+|Splash Screen |SignUp Activity |SignIn Activity | Input Screen |DialogBox PopUp | Output Screen |
+| :---:| :---: | :---: | :---: | :---: | :---: | 
+|![Splash Demo](app/splashScreen.gif) | ![SignUp](app/signUp.png)| ![SignIn](app/signIn.png)| ![Input](app/cafe1.png) | ![dialogBox](app/dialogBox.png) |![Output](app/cafe2.png) 
 
 
 ## How to Build from Source
