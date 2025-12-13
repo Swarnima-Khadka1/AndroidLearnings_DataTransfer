@@ -1,50 +1,40 @@
 package com.example.datatransfer
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.widget.EditText
-import android.widget.Button
-import android.widget.TextView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import android.widget.Toast
-import com.google.android.material.textfield.TextInputEditText
 import android.content.Intent
+import com.example.datatransfer.databinding.ActivityFirstBinding
 
 
 class First : AppCompatActivity() {
-
+    lateinit var binding: ActivityFirstBinding
     lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_first)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+         binding= ActivityFirstBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val userName= findViewById<TextInputEditText>(R.id.etName)
-        val mail= findViewById<TextInputEditText>(R.id.etMail)
-        val password= findViewById<TextInputEditText>(R.id.etPassword)
-        val rePassword= findViewById<TextInputEditText>(R.id.etRePassword)
-        val btnSign= findViewById<Button>(R.id.btnSignUp)
-        val tvSign= findViewById<TextView>(R.id.tvSignIn)
+
+        binding.btnSignUp.setOnClickListener {
+            val  username= binding.etName.text.toString()
+            val  email= binding.etMail.text.toString()
+            val  pass= binding.etPassword.text.toString()
+            val  rePass= binding.etRePassword.text.toString()
 
 
-        btnSign.setOnClickListener {
-            val  username= userName.text.toString()
-            val  email= mail.text.toString()
-            val  pass= password.text.toString()
-            val  rePass= rePassword.text.toString()
-
-            // Reset previous errors
-            password.error = null
-            rePassword.error = null
 
             if (username.isEmpty()) {
                 Toast.makeText(this, "Please enter a username", Toast.LENGTH_SHORT).show()
@@ -70,6 +60,11 @@ class First : AppCompatActivity() {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener // Stop the process
             }
+            if(!binding.checkBox.isChecked){
+                binding.checkBox.buttonTintList = getColorStateList(R.color.hotpink)
+             Toast.makeText(this,"Please accept the terms and conditions",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             Toast.makeText(this,"Validation successful! Registering user...",Toast.LENGTH_SHORT).show()
 
             val user= User(username,email,pass,rePass)
@@ -87,7 +82,7 @@ class First : AppCompatActivity() {
 
 
         }
-       tvSign.setOnClickListener {
+       binding.tvSignIn.setOnClickListener {
            intent= Intent(this,signIn::class.java)
            startActivity(intent)
        }

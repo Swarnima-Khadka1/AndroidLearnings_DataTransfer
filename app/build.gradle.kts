@@ -10,9 +10,7 @@ android {
     compileSdk {
         version = release(36)
     }
-    buildFeatures {
-        viewBinding = true
-    }
+
 
     defaultConfig {
         applicationId = "com.example.datatransfer"
@@ -32,6 +30,9 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+    buildFeatures {
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
