@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -32,9 +34,22 @@ override fun onCreate(savedInstanceState: Bundle?) {
                 findViewById<EditText>(R.id.eT1).text.toString() + "\n" + findViewById<EditText>(R.id.eT2).text.toString() + "\n" + findViewById<EditText>(
                     R.id.eT3
                 ).text.toString() + "\n" + findViewById<EditText>(R.id.eT4).text.toString()
-            intent = Intent(this, showOrder::class.java)
-            intent.putExtra(KEY, message)
-            startActivity(intent)
+           val alert = AlertDialog.Builder(this)
+            alert.setTitle("Are you sure")
+            alert.setMessage("Do you want to order your preferred foods/Drinks?")
+            alert.setIcon(R.drawable.outline_fastfood_24)
+
+            alert.setPositiveButton("Yes") { _, _ ->
+                val intent = Intent(this, showOrder::class.java)
+                intent.putExtra(KEY, message)
+                startActivity(intent)
+            }
+            alert.setNegativeButton("No") { _, _ ->
+                Toast.makeText(this, "Order Cancelled", Toast.LENGTH_SHORT).show()
+            }
+            alert.show()
+
+
         }
     }
 }
