@@ -14,16 +14,13 @@ This is simple beginner Practice of a core Android concept: **passing data betwe
 - **Clean Second Screen UI** – Displays the transferred text neatly  
 
 ---
-## Splash Screen
 
-![Splash Demo](app/splashScreen.gif)
----
 
 ## 📸 Screenshots
 
 |Splash Screen |SignUp Activity |SignIn Activity | Input Screen | Output Screen |
 | :---:| :---: | :---: | :---: | :---: | 
-|![Splash Demo](app/splashScreen.gif) | ![Input](app/signup.png)| ![Input](app/signin.png)| ![Input](app/cafe1.png) | ![Output](app/cafe2.png) 
+|![Splash Demo](app/splashScreen.gif) | ![SignUp](app/signUp.png)| ![SignIn](app/signIn.png)| ![Input](app/cafe1.png) | ![Output](app/cafe2.png) 
 
 
 ## How to Build from Source
